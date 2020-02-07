@@ -33,6 +33,7 @@ obj-$(CONFIG_IR_RX51) += ir-rx51.o
 obj-$(CONFIG_IR_SPI) += ir-spi.o
 obj-$(CONFIG_IR_STREAMZAP) += streamzap.o
 obj-$(CONFIG_IR_WINBOND_CIR) += winbond-cir.o
+obj-$(CONFIG_IR_XIAOMI_SPI) += ir-xiaomi-spi.o
 obj-$(CONFIG_RC_LOOPBACK) += rc-loopback.o
 obj-$(CONFIG_IR_GPIO_CIR) += gpio-ir-recv.o
 obj-$(CONFIG_IR_GPIO_TX) += gpio-ir-tx.o

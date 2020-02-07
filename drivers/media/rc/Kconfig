@@ -437,6 +437,15 @@ config IR_PWM_TX
 	   To compile this driver as a module, choose M here: the module will
 	   be called pwm-ir-tx.
 
+config IR_XIAOMI_SPI
+	tristate "SPI connected IR LED"
+	depends on SPI && LIRC
+	---help---
+	   Say Y if you want to use an IR LED connected through SPI bus.
+
+	   To compile this driver as a module, choose M here: the module will be
+	   called ir-spi.
+
 config RC_ST
 	tristate "ST remote control receiver"
 	depends on RC_CORE
