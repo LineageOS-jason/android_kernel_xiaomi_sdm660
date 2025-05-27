@@ -1,0 +1,30 @@
+# A simple action usage
+name: Build Kernel
+on:
+  workflow_dispatch:
+
+jobs:
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+
+    steps:
+      - name: Build Kernel
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/burkvt/android_kernel_xiaomi_sdm660
+          kernel-dir: msm-4.19
+          kernel-branch: lineage-21-4.19
+          config: jason_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: true
+          ksu-version: main
+          android-version: 14
+          aosp-clang-version: r487747c
+          disable-lto: true
+          anykernel3: true
